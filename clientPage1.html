@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" type="text/css" href="css/notification.css">
+  </head>
+  <body>
+     <div class="btn-design" onclick="showNotification()"><p style="margin: 0px;">Click Here to see the Notification Panel</p></div>
+     <div class="hidden" id="Notification-section">
+     	<div class="notifcation-wrapper">
+     		<div class="notification-body">
+     			<div class="play-icon-wrapper">
+     				<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+     			</div>
+     			<div class="Now-Playing-text">
+     				<p>Now Playing</p>
+     			</div>
+     			<div class="Playlist-name-text">
+     				<p>Playlist Name</p>
+     			</div>
+     			<div class="downloading-section">
+     				<div class="downloading-icon-wrapper">
+	     				<i class="fa fa-cloud-download" aria-hidden="true"></i>
+	     			</div>
+	     			<div class="downloading-text">
+	     				<p>Downloading...</p>
+	     			</div>
+     			</div>
+     		</div>
+     		<div class="notification-footer">
+     			
+     		</div>
+     	</div>
+     </div>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+     <script type="text/javascript">               
+         function showNotification(){
+            console.log('hello');
+            $('#Notification-section').removeClass("hidden");
+            $('#Notification-section').addClass("client-page-notification animated slideInUp");
+        }
+	 </script>
+  </body>
+</html>
