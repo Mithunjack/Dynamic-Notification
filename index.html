@@ -41,11 +41,26 @@
      	</div>
      </div>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
-     <script type="text/javascript">               
-         function showNotification(){
+     <script type="text/javascript"> 
+        var NotificationState = 0;              
+        function showNotification(){
             console.log('hello');
-            $('#Notification-section').removeClass("hidden");
-            $('#Notification-section').addClass("client-page-notification animated slideInUp");
+            if (NotificationState==0) {
+                $('#Notification-section').removeClass("hidden");
+                $('#Notification-section').addClass("client-page-notification animated slideInUp");
+                NotificationState=1;
+            }
+            else{
+                $('#Notification-section').removeClass("slideInUp");
+                $('#Notification-section').addClass("slideOutDown");
+                NotificationState=0;
+                setTimeout(changenotification,300);
+            }
+        }
+        
+        function changenotification(){
+                $('#Notification-section').removeClass("slideOutDown client-page-notification animated");
+                $('#Notification-section').addClass("hidden");
         }
 	 </script>
   </body>
